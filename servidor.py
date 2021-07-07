@@ -8,7 +8,7 @@ cursor = conection.cursor()
 
 def registro():
     c = ""
-    
+    print(df)
     for i, index in df.iterrows():
 
         _id = df["id"][i]
@@ -46,6 +46,7 @@ def registro():
             query = query[:-2] + ");"
             cursor.execute(query)
             print(query)
+        
         conection.commit()
 
 if __name__ == "__main__":
