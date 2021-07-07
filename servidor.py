@@ -37,10 +37,10 @@ def registro():
 
         else:
             print("Guardando id: " + str(_id))
-            index = df["id"].max()
+            # index = df["id"].max()
 
             # index = index + 1
-            query = "INSERT INTO agencia_informacion VALUES (" + str(index) + ",'"
+            query = "INSERT INTO agencia_informacion VALUES (" + str(_id) + ",'"
             for j in df.columns[1:]:
                 query = query + df[j][i] +  "','"
             query = query[:-2] + ");"
@@ -51,4 +51,3 @@ def registro():
 if __name__ == "__main__":
     
     registro()
-    
