@@ -1,7 +1,7 @@
 import pandas as pd
 import pyodbc
 
-df = pd.read_excel("https://github.com/Sud-Austral/MONITOREO-DI/raw/main/000%20AGENCIA%20INFORMACION%20DI/agencia_informacion.xlsx")
+df = pd.read_excel("https://github.com/Sud-Austral/MONITOREO-DI/blob/main/000%20AGENCIA%20INFORMACION%20DI/agencia_informacion.xlsx?raw=true")
 
 conection = pyodbc.connect("Driver={ODBC Driver 17 for SQL Server};Server=sud-austral.database.windows.net;Database=agencia;uid=sudaustral;pwd=Sud123456789")
 cursor = conection.cursor()
