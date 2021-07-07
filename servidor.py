@@ -37,7 +37,7 @@ def registro():
 
         else:
             print("Guardando id: " + str(_id))
-            index = dfC["id"].max()
+            index = df["id"].max()
 
             # index = index + 1
             query = "INSERT INTO agencia_informacion VALUES (" + str(index) + ",'"
