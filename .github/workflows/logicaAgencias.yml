@@ -23,7 +23,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt   
 
-      run: |
         python servidor.py
 
     - uses: stefanzweifel/git-auto-commit-action@v2
