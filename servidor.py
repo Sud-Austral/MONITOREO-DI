@@ -38,15 +38,15 @@ def registro():
         else:
             print("Guardando id: " + str(_id))
             index = dfC["id"].max()
-            for i in range(len(df)):
-                index = index + 1
-                query = "INSERT INTO agencia_informacion VALUES (" + str(index) + ",'"
-                for j in df.columns[1:]:
-                    query = query + df[j][i] +  "','"
-                query = query[:-2] + ");"
-                cursor.execute(query)
-                print(query)
-            conection.commit()
+
+            # index = index + 1
+            query = "INSERT INTO agencia_informacion VALUES (" + str(index) + ",'"
+            for j in df.columns[1:]:
+                query = query + df[j][i] +  "','"
+            query = query[:-2] + ");"
+            cursor.execute(query)
+            print(query)
+        conection.commit()
 
 if __name__ == "__main__":
     
