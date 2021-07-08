@@ -44,8 +44,9 @@ def registro():
             for j in df.columns[1:]:
                 query = query + str(df[j][i]) +  "','"
             query = query[:-2] + ");"
-            cursor.execute(query)
             print(query)
+            cursor.execute(query)
+            
         
         conection.commit()
 
