@@ -42,7 +42,7 @@ def registro():
             # index = index + 1
             query = "INSERT INTO agencia_informacion VALUES (" + str(_id) + ",'"
             for j in df.columns[1:]:
-                query = query + df[j][i] +  "','"
+                query = query + str(df[j][i]) +  "','"
             query = query[:-2] + ");"
             cursor.execute(query)
             print(query)
