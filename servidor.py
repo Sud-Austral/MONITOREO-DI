@@ -26,7 +26,7 @@ def registro():
 
             query = "UPDATE agencia_informacion SET "
             for j in df.columns[1:]:
-                c += j  + "='" + str(df[j][i]) +"', "
+                c += j  + "='" + str(df[j][i]).replace("'"," ") +"', "
             query = query + c + "WHERE id='" + str(_id) +"'"
             query = query.replace(", WHERE", " WHERE")
             cursor.execute(query)
@@ -42,7 +42,7 @@ def registro():
             # index = index + 1
             query = "INSERT INTO agencia_informacion VALUES (" + str(_id) + ",'"
             for j in df.columns[1:]:
-                query = query + str(df[j][i]) +  "','"
+                query = query + str(df[j][i]).replace("'"," ") +  "','"
             query = query[:-2] + ");"
             print(query)
             cursor.execute(query)
